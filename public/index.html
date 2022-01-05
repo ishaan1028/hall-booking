@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hall Booking API</title>
+  </head>
+  <style>
+    body {
+      background-color: whitesmoke;
+    }
+    .titleDiv {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .heroText {
+      font-size: 3rem;
+      margin: 0 0 2rem 0;
+    }
+    .subTitle {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0 0 1rem 0;
+    }
+    .body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .endpointDetails {
+      padding: 0 15rem;
+      font-size: 1.3rem;
+    }
+    .endpointDetails li {
+      margin-bottom: 1rem;
+    }
+    .endpointDetails li span {
+      padding: 0 0.5rem;
+    }
+  </style>
+  <body>
+    <div class="titleDiv">
+      <h2 class="heroText">Hall Booking</h2>
+    </div>
+    <div class="body">
+      <h4 class="subTitle">API ENDPOINTS</h4>
+      <ul class="endpointDetails">
+        <li>Get all rooms with booked data - <b>/rooms/all</b></li>
+        <li>Get all customers with booked data - <b>/rooms/customers</b></li>
+        <li>
+          <p>
+            Create room (POST) with body <span><b>- /rooms/create</b></span>
+          </p>
+          {<span>"numberOfSeats":2,</span
+          ><span>"amenities":["WiFi,TV,AC"], </span>
+          <span>"pricePerHour":600 </span>
+          }
+        </li>
+        <li>
+          <p>
+            Booking a room (POST) with body <span><b>- /rooms/book</b></span>
+          </p>
+
+          {
+          <span>"customerName": "John",</span>
+          <span> "date": "5-1-2022",</span>
+          <span>"startTime": "1.30",</span>
+          <span> "finishTime":"2",</span>
+          <span>"roomId":5</span>
+          }
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
